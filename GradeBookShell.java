@@ -79,10 +79,6 @@ public class GradeBookShell {
     //Currently active class: works like a directory in a Unix command line,
     //and can be tracked by using a field in the shell class to track it.
 
-    /**
-     * Shows the currently-active class. - SANDRA - NEEDS TESTING,
-     * ALSO HOW THE HECK DO WE TRACK CURRENT DIRECTORY?
-     */
     @Command
     public void showClass(){
         String query = "SELECT description, course_num, section_num, term" +
@@ -103,10 +99,7 @@ public class GradeBookShell {
 
     }
 
-    /**
-     * Lists the categories with their weights. - SANDRA
-     * NEEDS TESTING - NEEDS TO KEEP TRACK OF CURRENT CLASS
-     */
+   
     @Command
     public void showCategories(){
         String query = "SELECT weight, name" +
@@ -135,11 +128,7 @@ public class GradeBookShell {
     @Command
     public void addCategory(String name, Double weight){}
 
-    /**
-     * Lists the items with their point values, - SANDRA
-     * grouped by category.
-     * NEEDS TESTING, NEEDS TO TRACK CURRENT DIRECTORY
-     */
+
     @Command
     public void showItems(){
         String query = "SELECT description, point_val, name" +
@@ -237,17 +226,6 @@ public class GradeBookShell {
      */
     @Command
     public void gradebook(){}
-
-
-
-
-
-
-
-
-
-
-
 
     public static void main(String[] args) throws IOException, SQLException {
         // First (and only) command line argument: database URL
